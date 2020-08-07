@@ -1,6 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
 A prova consiste em ler dados da api do [reddit](https://www.reddit.com/dev/api/) do subreddit [reactjs](https://www.reddit.com/r/reactjs/) e criar uma tela contendo as informações que podem ser vistas no arquivo [frontend.psd](https://github.com/winnin/desafio/blob/master/frontend.psd) com três botões para navegar entre hot, new e rising.
 
 
