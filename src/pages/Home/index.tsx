@@ -13,7 +13,9 @@ interface Item {
 const Home = () => {
   const [items, setItems] = useState<Item[]>([]);
   
-  const data = token.getSubreddit('reactjs')
+  const subreddit = token.getSubreddit('reactjs')
+  
+
   
   function handleHot() {}
 
