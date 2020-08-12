@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
@@ -16,7 +16,6 @@ const Home = () => {
   const subreddit = token.getSubreddit('reactjs')
   
 
-  
   function handleHot() {}
 
   function handleNews() {}
