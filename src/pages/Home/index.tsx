@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
+import { response } from 'express';
 
 
 interface Item {
@@ -11,9 +12,9 @@ interface Item {
 }
 
 const Home = () => {
+  const data = token.getSubreddit('reactjs')
+
   const [items, setItems] = useState<Item[]>([]);
-  
-  const subreddit = token.getSubreddit('reactjs')
   
 
   function handleHot() {}
