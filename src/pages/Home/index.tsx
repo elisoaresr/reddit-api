@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
@@ -25,9 +25,10 @@ const Home = () => {
     }
   }
 
-  function handleHot(this: any) {
-    
-
+  function handleHot() {
+    getData('hot').then(response => {
+      setItems(response);
+    })
   }
 
   function handleNews() { }
