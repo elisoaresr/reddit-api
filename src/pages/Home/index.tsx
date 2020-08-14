@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
+import { response } from 'express';
 
 
 interface Item {
@@ -11,7 +12,7 @@ interface Item {
 
 const Home = () => {
   const api = token.getSubreddit('reactjs')
-
+  
   const [items, setItems] = useState<Item[]>([]);
 
   const getData = async (params: any) => {
