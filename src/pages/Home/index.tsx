@@ -2,26 +2,37 @@ import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
-import { response } from 'express';
-
-
-interface Item {
-  id: number,
-  name: string,
-
-}
 
 const Home = () => {
-  const data = token.getSubreddit('reactjs')
+  const api = token.getSubreddit('reactjs')
 
-  const [items, setItems] = useState<Item[]>([]);
-  
+  const [items, setItems] = useState([]);
 
-  function handleHot() {}
+  const getData = async (params: any) => {
+    try {
+      if (params === 'hot') {
+        params = await api.getHot({ limit: 10 })
+      }
+      if (params === 'new') {
+        params = await api.getNew({ limit: 10 })
+      }
+      if (params === 'rising') {
+        params = await api.getRising({ limit: 10 })
+      }
+      return params;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
-  function handleNews() {}
+  function handleHot(this: any) {
+    
 
-  function handleRising() {}
+  }
+
+  function handleNews() { }
+
+  function handleRising() { }
 
 
 
