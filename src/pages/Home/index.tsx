@@ -3,10 +3,16 @@ import './styles.css';
 
 import token from '../../services/passport';
 
+
+interface Item {
+  id: number;
+  title: string;
+}
+
 const Home = () => {
   const api = token.getSubreddit('reactjs')
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<Item[]>([]);
 
   const getData = async (params: any) => {
     try {
@@ -25,16 +31,11 @@ const Home = () => {
     }
   }
 
-  function handleHot() {
-    getData('hot').then(response => {
-      setItems(response);
-    })
-  }
+  function handleHot() { }
 
   function handleNews() { }
 
   function handleRising() { }
-
 
 
   return (
