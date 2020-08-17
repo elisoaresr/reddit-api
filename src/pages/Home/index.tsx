@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './styles.css';
 
 import token from '../../services/passport';
-import { response } from 'express';
-
 
 interface Item {
   id: number;
