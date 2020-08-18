@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-import token from '../../services/passport';
+import connection from '../../services/config';
 
 interface Item {
   id: number;
@@ -9,26 +9,7 @@ interface Item {
 }
 
 const Home = () => {
-  const api = token.getSubreddit('reactjs')
-  
   const [items, setItems] = useState<Item[]>([]);
-
-  const getData = async (params: any) => {
-    try {
-      if (params === 'hot') {
-        params = await api.getHot({ limit: 10 })
-      }
-      if (params === 'new') {
-        params = await api.getNew({ limit: 10 })
-      }
-      if (params === 'rising') {
-        params = await api.getRising({ limit: 10 })
-      }
-      return params;
-    } catch (err) {
-      console.log(err);
-    }
-  }
 
   function handleHot() { }
 
