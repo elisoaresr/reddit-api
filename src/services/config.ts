@@ -2,18 +2,18 @@ import token from './passport';
 
 const api = token.getSubreddit('reactjs')
 
-const connection = async (params: any) => {
+const connection = async (data: any) => {
   try {
-    if (params === 'hot') {
-      params = await api.getHot({ limit: 10 })
+    if (data === 'hot') {
+      data = await api.getHot({ limit: 10 })
     }
-    if (params === 'new') {
-      params = await api.getNew({ limit: 10 })
+    if (data === 'new') {
+      data = await api.getNew({ limit: 10 })
     }
-    if (params === 'rising') {
-      params = await api.getRising({ limit: 10 })
+    if (data === 'rising') {
+      data = await api.getRising({ limit: 10 })
     }
-    return params;
+    return data;
   } catch (err) {
     console.log(err);
   }

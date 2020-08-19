@@ -11,7 +11,11 @@ interface Item {
 const Home = () => {
   const [items, setItems] = useState<Item[]>([]);
 
-  function handleHot() { }
+  function handleHot() { 
+    connection('hot').then(response => {
+      setItems(response);
+    })
+  }
 
   function handleNews() { }
 
