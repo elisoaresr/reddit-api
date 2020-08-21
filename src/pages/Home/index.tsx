@@ -13,7 +13,7 @@ const Home = () => {
 
   function handleHot() { 
     connection('hot').then(response => {
-      setItems(response);
+      setItems(response)
     })
   }
 
