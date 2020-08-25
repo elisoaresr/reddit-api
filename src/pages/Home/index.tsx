@@ -33,7 +33,9 @@ const Home = () => {
         </div>
       </header>
       <div className="main">
-        Conteúdo
+        <ul>
+          <span>Conteúdo</span>
+        </ul>
       </div>
     </div>
   );
