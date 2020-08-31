@@ -12,7 +12,7 @@ const Home = () => {
   const [items, setItems] = useState<Item[]>([]);
 
   function handleHot() {
-    connection('list').then(response => {
+    connection('hot').then(response => {
       console.log(response);
     })
   }
